@@ -44,4 +44,12 @@ Cinema.prototype.totalTime = function () {
   return result;
 };
 
+//extension
+
+Cinema.prototype.filmsByProperty = function (property, value) {
+  return this.films.filter((film) => {
+    return film[property] === value;
+  });
+};
+
 module.exports = Cinema;
